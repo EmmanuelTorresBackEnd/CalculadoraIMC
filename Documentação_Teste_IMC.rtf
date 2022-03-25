@@ -1,0 +1,169 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}{\f2\fnil\fcharset0 Calibri Light;}{\f3\fnil\fcharset0 Calibri;}{\f4\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green255\blue255;\red0\green0\blue255;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa160\sl259\slmult0\qc\b\fs56\lang22 Documenta\'e7\'e3o de Planejamento\fs32\par
+CALCULADORA DE IMC\par
+\par
+Sumario:\par
+
+\pard\sa160\sl259\slmult0\b0\fs24 1. ------- Introdu\'e7\'e3o\par
+1.1 ----- Historico de revis\'f5es e membros\par
+1.2 ----- Requisitos a testar\par
+2. ------- Recursos \par
+3. ------- Escopo\par
+4. ------- Estrategias de teste\par
+4.1 ----- Teste Unit\'e1rio\par
+4.2 ----- \highlight1 Teste de integra\'e7\'e3o\par
+4.3 ----- Teste autom\'e1tico de unidade\par
+4.4 ----- Teste autom\'e1tico de integra\'e7\'e3o \par
+4.5 ----- Teste de carga\par
+5. ------- Fluxos\par
+5.1 ----- Fluxo b\'e1sico\par
+5.2 ----- Fluxo Alternativo\par
+6. ------- Requisitos de Hardware\par
+\highlight0\par
+\b\fs32\par
+
+\pard\sa160\sl259\slmult0\qc\fs28\par
+\par
+
+\pard\sa160\sl259\slmult0\fs32 1. INTRODU\'c7\'c3O:\par
+\b0\fs24 O teste que a ser realizado ter\'e1 por objetivo avaliar as condi\'e7\'f5es do sistema que calcula o IMC (\'cdndice de Massa Corporal) e validar suas condi\'e7\'f5es de uso est\'e3o conforme ou desconforme ao que se requer do sistema. A t\'e9cnica a ser utilizada ser\'e1 manual, o teste ser\'e1 unit\'e1rio e o respons\'e1vel pelo teste \'e9 o autor do documento.\par
+\par
+\b\fs28 1.1 Hist\'f3rico de Revis\'f5es\par
+\trowd\trgaph108\trleft108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat3\clcbpat1\clshdng1200\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx1384\clcfpat3\clcbpat1\clshdng1200\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx2376\clcfpat3\clcbpat1\clshdng1200\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx6912\clcfpat3\clcbpat1\clshdng1200\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx8897 
+\pard\intbl\keep\sb60\sa60\sl240\slmult1\qc\fs22 Data\cell 
+\pard\intbl\keep\li34\sb60\sa60\sl240\slmult1\qc Vers\'e3o\cell Descri\'e7\'e3o\cell 
+\pard\intbl\keep\li30\sb60\sa60\sl240\slmult1\qc Membros\cell\row\trowd\trgaph108\trleft108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx1384\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx2376\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx6912\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx8897 
+\pard\intbl\keep\sb60\sa60\sl240\slmult1\cf2\b0\fs24 07/03/2022\cf0\b\fs22\cell 
+\pard\intbl\keep\li34\sb60\sa60\sl240\slmult1\cf2\b0\fs24 1.0\cf0\b\fs22\cell\cf2\b0\fs24 Este \'e9 primeiro teste: teste de efici\'eancia dos c\'e1lculos da calculadora\cf0\b\fs22\cell 
+\pard\intbl\keep\li30\sb60\sa60\sl240\slmult1\cf2\b0\fs24 Emmanuel Rodrigues Torres\cf0\b\fs22\cell\row\trowd\trgaph108\trleft108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx1384\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx2376\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx6912\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx8897 
+\pard\intbl\keep\sb60\sa60\sl240\slmult1\qj\cell 
+\pard\intbl\keep\li34\sb60\sa60\sl240\slmult1\cell\cell 
+\pard\intbl\keep\li30\sb60\sa60\sl240\slmult1\cell\row\trowd\trgaph108\trleft108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx1384\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx2376\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx6912\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx8897 
+\pard\intbl\keep\sb60\sa60\sl240\slmult1\cell 
+\pard\intbl\keep\li34\sb60\sa60\sl240\slmult1\cell\cell 
+\pard\intbl\keep\li30\sb60\sa60\sl240\slmult1\cell\row\trowd\trgaph108\trleft108\trrh1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx1384\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx2376\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx6912\clcfpat3\clcbpat1\clbrdrl\brdrw12\brdrs\brdrcf3\clbrdrt\brdrw12\brdrs\brdrcf3\clbrdrr\brdrw12\brdrs\brdrcf3\clbrdrb\brdrw12\brdrs\brdrcf3 \cellx8897 
+\pard\intbl\keep\sb60\sa60\sl240\slmult1\cell 
+\pard\intbl\keep\li34\sb60\sa60\sl240\slmult1\cell\cell 
+\pard\intbl\keep\li30\sb60\sa60\sl240\slmult1\cell\row 
+\pard\sa160\sl259\slmult0\qc\fs24\par
+
+\pard\sa160\sl259\slmult0\b0\par
+\b\fs32 1.2 REQUISITOS A TESTAR:\par
+\b0\fs24 1. Acesso a Calculadora : Dever\'e1 manter acesso do usu\'e1rio aos seus recursos.\par
+2. Calculo do IMC : Dever\'e1 retornar um valor num\'e9rico que tenha a unidade de medida Kg/m\'b2.\par
+3. Tempo de resposta: Dever\'e1 ser menor ou igual a 4 segundos.\par
+\b\par
+\fs32 2. RECURSOS:\par
+\b0\fs24 Para a realiza\'e7\'e3o dos testes, ser\'e1 necess\'e1rio ter instalado o Visual Studio ou o VS Code, e com dotnet 5 ou superior instalado.\par
+\b\par
+
+\pard\sa200\sl240\slmult1\fs32 3. ESCOPO:\par
+
+\pard\ri600\sb200\sa200\sl240\slmult1\b0\fs22 Este Plano de Teste descreve os testes de integra\'e7\'e3o e do sistema que ser\'e3o conduzidos ap\'f3s o desenvolvimentos de fun\'e7\'f5es do sistema.\par
+O objetivo era testar a possibilidade e o desempenho da arquitetura selecionada. \'c9 importante que todas as interfaces do sistema e do subsistema sejam testadas, bem como o desempenho do sistema nesse est\'e1gio antecipado. O teste dos recursos e da funcionalidade do sistema n\'e3o ser\'e1 conduzido no prot\'f3tipo.\par
+As interfaces entre os seguintes subsistemas ser\'e3o testadas:\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb200\sl240\slmult1\fs24 Inserir Idade\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Inserir Peso\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1 Inserir G\'eanero\par
+
+\pard\sa200\sl240\slmult1\b\fs22\par
+
+\pard\sb200\sa200\sl240\slmult1\tqr\tx8560\highlight1\fs32 4. ESTRAT\'c9GIA DE TESTE:\fs24\tab\fs22\par
+
+\pard\sa200\sl240\slmult1\highlight0\b0 Realizar testes de padr\'e3o de desenvolvimento utilizando o Visual Studio.\par
+
+\pard\sl240\slmult1\highlight1\b\fs24\par
+
+\pard\sb60\sa200\sl240\slmult1\tqr\tx8560 4.1 Teste unit\'e1rio\fs22\tab\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb60\sl240\slmult1\tqr\tx8560\b0\fs24 Testar a fun\'e7\'e3o de calcular peso\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular idade\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de selecionar g\'eanero\par
+
+\pard\li720\sb60\sa200\sl240\slmult1\tqr\tx8560\b\fs22\par
+
+\pard\sb60\sa200\sl240\slmult1\tqr\tx8560\fs24 4.2 Teste de integra\'e7\'e3o\tab\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb60\sl240\slmult1\tqr\tx8560\b0 Testar a fun\'e7\'e3o de calcular peso + idade\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular idade + g\'eanero\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular idade + g\'eanero + peso\par
+
+\pard\li720\sb60\sa200\sl240\slmult1\tqr\tx8560\b\fs22\par
+\par
+
+\pard\sb60\sa200\sl240\slmult1\tqr\tx8560\fs24 4.3 Teste autom\'e1tico de unidade\tab\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb60\sl240\slmult1\tqr\tx8560\b0 Testar a fun\'e7\'e3o de calcular idade com todos os valores abaixo de 20\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular peso com todos os valores abaixo de 20\par
+{\pntext\f4\'B7\tab}Testar a fun\'e7\'e3o de calcular idade com todos os valores acima de 300 at\'e9 500\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular idade com todos os valores acima de 300 at\'e9 500\par
+
+\pard\sb60\sa200\sl240\slmult1\tqr\tx8560\b\fs22\par
+\fs24 4.4 Teste autom\'e1tico de integra\'e7\'e3o \par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb60\sl240\slmult1\tqr\tx8560\b0 Testar a fun\'e7\'e3o de calcular peso + idade com valores abaixo de 20 e simular erros\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular idade + g\'eanero + peso com todos os valores abaixo de 20\par
+{\pntext\f4\'B7\tab}Testar a fun\'e7\'e3o de calcular peso + idade com valores acima de 20 e simular erros\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tqr\tx8560 Testar a fun\'e7\'e3o de calcular idade com valores acima de 300 at\'e9 500 e simular erros\par
+
+\pard\sb60\sa200\sl240\slmult1\tqr\tx8560\b\par
+
+\pard\sa200\sl240\slmult1\highlight0\fs22 4.5 Teste de Carga\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\highlight1\b0\fs24 Verificar a resposta do sistema quando estiverem mais de 200 pessoas fazendo o c\'e1lculo do IMC ao mesmo tempo.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1 Verificar a resposta do sistema quando existir 100 acessos simult\'e2neos de na p\'e1gina de cadastro da plataforma\par
+
+\pard\sa160\sl259\slmult0\highlight0\b\par
+
+\pard\sa160\sl259\slmult0\fs32 5. FLUXOS:\par
+
+\pard\sa160\sl259\slmult0\par
+
+\pard\sa160\sl259\slmult0\fs22 5.1 FLUXO BASICO\par
+
+\pard\sa160\sl259\slmult0\fs28\par
+\b0\fs24 1 \f1\endash\f0  O usu\'e1rio abre a calculadora\par
+2 \f1\endash\f0  O usu\'e1rio digita seu peso e altura\par
+3 \f1\endash\f0  O usu\'e1rio recebe o valor calculado\par
+\par
+
+\pard\sa160\sl259\slmult0\b\fs22 5.2 FLUXO ALTERNATIVO\par
+
+\pard\sa160\sl259\slmult0\fs28\par
+\b0\fs24 1 \f1\endash\f0  O usu\'e1rio exclui os dados da calculadora\par
+2 \f1\endash\f0  O usu\'e1rio esquece o peso e a altura \par
+3 \f1\endash\f0  O usu\'e1rio fecha a calculadora\par
+\b\par
+
+\pard\sb200\sa200\sl240\slmult1\tqr\tx8560\highlight1 6. REQUISITOS DE HARDWARE\b0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Desktop/Notebook\par
+{\pntext\f4\'B7\tab}Acesso a internet \par
+{\pntext\f4\'B7\tab}8GB RAM\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1 256GB ou superior\par
+
+\pard\sa160\sl259\slmult0\highlight0\f2\par
+
+\pard\sa200\sl276\slmult1\f3\fs22\par
+}
+ 

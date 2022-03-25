@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "68252123-bccd-4a5b-a820-d93ad005bdb2": {
+      "ProjectGuid": "68252123-bccd-4a5b-a820-d93ad005bdb2",
+      "DisplayName": "CalculadoraIMC",
+      "ColorIndex": 0
+    },
+    "2708d682-85d4-401a-b7fd-3253d6699cad": {
+      "ProjectGuid": "2708d682-85d4-401a-b7fd-3253d6699cad",
+      "DisplayName": "XUnitTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
